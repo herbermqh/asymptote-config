@@ -17,6 +17,5 @@ My config directory contains packages from the following authors:
 
 2. Enjoy !
 
-# Troubleshootings
-This files aren't really up to date and may contains some bugs which are actually removed.
-Feel free to tell me.
+# Problema con ghostscript
+1. Se debe utilizar el archivo ghostscript del texlive 2021.
