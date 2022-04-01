@@ -13,7 +13,7 @@ My config directory contains packages from the following authors:
 # Installation
 1. Clone this repository into your $HOME as the hidden config directory for asymptote :
 
-`git clone https://github.com/jefflance/asymptote-config.git $HOME/.asy`
+`git clone https://github.com/herbermqh/asymptote-config.git $HOME/.asy`
 
 2. Enjoy !
 
