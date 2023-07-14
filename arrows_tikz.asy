@@ -236,7 +236,7 @@ picture sharparrow2(arrowhead arhead=DefaultHead, path g, pen p=currentpen,
     return pic;
 }
 
-arrowbar BeginSharpArrow(arrowhead arhead=DefaultHead, real size=0,
+arrowbar BeginArrowTikz(arrowhead arhead=DefaultHead, real size=0,
                          real angle=arrowangle, filltype fill=null,
                          position currentpos=BeginPoint)
 {
@@ -247,7 +247,7 @@ arrowbar BeginSharpArrow(arrowhead arhead=DefaultHead, real size=0,
     };
 }
 
-arrowbar SharpArrow(arrowhead arhead=DefaultHead, real size=0,
+arrowbar ArrowTikz(arrowhead arhead=DefaultHead, real size=0,
                     real angle=arrowangle, filltype fill=null,
                     position currentpos=EndPoint)
 {
@@ -257,12 +257,13 @@ arrowbar SharpArrow(arrowhead arhead=DefaultHead, real size=0,
         return false;
     };
 }
+arrowbar ArrowTikz=ArrowTikz(4bp);
 
-arrowbar EndSharpArrow(arrowhead arhead=DefaultHead, real size=0,
+arrowbar EndArrowTikz(arrowhead arhead=DefaultHead, real size=0,
                        real angle=arrowangle, filltype fill=null,
-                       position currentpos=EndPoint)=SharpArrow;
+                       position currentpos=EndPoint)=ArrowTikz;
 
-arrowbar MidSharpArrow(arrowhead arhead=DefaultHead, real size=0,
+arrowbar MidArrowTikz(arrowhead arhead=DefaultHead, real size=0,
                        real angle=arrowangle, filltype fill=null)
 {
     return new bool(picture pic, path g, pen p, margin the_margin) {
@@ -272,7 +273,7 @@ arrowbar MidSharpArrow(arrowhead arhead=DefaultHead, real size=0,
     };
 }
 
-arrowbar SharpArrows(arrowhead arhead=DefaultHead, real size=0,
+arrowbar ArrowTikzs(arrowhead arhead=DefaultHead, real size=0,
                      real angle=arrowangle, filltype fill=null)
 {
     return new bool(picture pic, path g, pen p, margin the_margin) {
@@ -302,26 +303,26 @@ arrowbar SharpArrows(arrowhead arhead=DefaultHead, real size=0,
 //real dy = -0.5;
 //real dx =  1.5;
 //
-//draw(shift(0*dx, 0*dy)*g, black, SharpArrow(arsize));
-//draw(shift(0*dx, 1*dy)*g, black, EndSharpArrow(arsize));
-//draw(shift(0*dx, 2*dy)*g, black, MidSharpArrow(arsize));
-//draw(shift(0*dx, 3*dy)*g, black, SharpArrows(arsize));
-//draw(shift(0*dx, 4*dy)*g, black, BeginSharpArrow(arsize));
+//draw(shift(0*dx, 0*dy)*g, black, ArrowTikz(arsize));
+//draw(shift(0*dx, 1*dy)*g, black, EndArrowTikz(arsize));
+//draw(shift(0*dx, 2*dy)*g, black, MidArrowTikz(arsize));
+//draw(shift(0*dx, 3*dy)*g, black, ArrowTikzs(arsize));
+//draw(shift(0*dx, 4*dy)*g, black, BeginArrowTikz(arsize));
 //
-//draw(shift(1*dx, 0*dy)*g, black+dashed, SharpArrow(arsize));
-//draw(shift(1*dx, 1*dy)*g, black+dashed, EndSharpArrow(arsize));
-//draw(shift(1*dx, 2*dy)*g, black+dashed, MidSharpArrow(arsize));
-//draw(shift(1*dx, 3*dy)*g, black+dashed, SharpArrows(arsize));
-//draw(shift(1*dx, 4*dy)*g, black+dashed, BeginSharpArrow(arsize));
+//draw(shift(1*dx, 0*dy)*g, black+dashed, ArrowTikz(arsize));
+//draw(shift(1*dx, 1*dy)*g, black+dashed, EndArrowTikz(arsize));
+//draw(shift(1*dx, 2*dy)*g, black+dashed, MidArrowTikz(arsize));
+//draw(shift(1*dx, 3*dy)*g, black+dashed, ArrowTikzs(arsize));
+//draw(shift(1*dx, 4*dy)*g, black+dashed, BeginArrowTikz(arsize));
 //
-//draw(shift(2*dx, 0*dy)*g, black, SharpArrow(StealthHead, arsize));
-//draw(shift(2*dx, 1*dy)*g, black, EndSharpArrow(StealthHead, arsize));
-//draw(shift(2*dx, 2*dy)*g, black, MidSharpArrow(StealthHead, arsize));
-//draw(shift(2*dx, 3*dy)*g, black, SharpArrows(StealthHead, arsize));
-//draw(shift(2*dx, 4*dy)*g, black, BeginSharpArrow(StealthHead, arsize));
+//draw(shift(2*dx, 0*dy)*g, black, ArrowTikz(StealthHead, arsize));
+//draw(shift(2*dx, 1*dy)*g, black, EndArrowTikz(StealthHead, arsize));
+//draw(shift(2*dx, 2*dy)*g, black, MidArrowTikz(StealthHead, arsize));
+//draw(shift(2*dx, 3*dy)*g, black, ArrowTikzs(StealthHead, arsize));
+//draw(shift(2*dx, 4*dy)*g, black, BeginArrowTikz(StealthHead, arsize));
 //
-//draw(shift(3*dx, 0*dy)*g, black+dashed, SharpArrow(StealthHead, arsize));
-//draw(shift(3*dx, 1*dy)*g, black+dashed, EndSharpArrow(StealthHead, arsize));
-//draw(shift(3*dx, 2*dy)*g, black+dashed, MidSharpArrow(StealthHead, arsize));
-//draw(shift(3*dx, 3*dy)*g, black+dashed, SharpArrows(StealthHead, arsize));
-//draw(shift(3*dx, 4*dy)*g, black+dashed, BeginSharpArrow(StealthHead, arsize));
+//draw(shift(3*dx, 0*dy)*g, black+dashed, ArrowTikz(StealthHead, arsize));
+//draw(shift(3*dx, 1*dy)*g, black+dashed, EndArrowTikz(StealthHead, arsize));
+//draw(shift(3*dx, 2*dy)*g, black+dashed, MidArrowTikz(StealthHead, arsize));
+//draw(shift(3*dx, 3*dy)*g, black+dashed, ArrowTikzs(StealthHead, arsize));
+//draw(shift(3*dx, 4*dy)*g, black+dashed, BeginArrowTikz(StealthHead, arsize));
